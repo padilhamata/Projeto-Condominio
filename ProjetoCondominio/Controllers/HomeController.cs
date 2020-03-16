@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using ProjetoCondominio.Models;
 using System.Web.Mvc;
 
 namespace ProjetoCondominio.Controllers
 {
     public class HomeController : Controller
     {
+            Pessoa pessoa = new Pessoa();
+        
             TesteEntities db = new TesteEntities();
         public ActionResult Index()
         {
@@ -17,6 +20,9 @@ namespace ProjetoCondominio.Controllers
 
         public void testaDados()
         {
+
+            Console.WriteLine(pessoa.Login);
+            Console.WriteLine(pessoa.Senha);
             Console.WriteLine("Estou aqui");
         }
 
