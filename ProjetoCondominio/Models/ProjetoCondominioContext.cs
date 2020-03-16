@@ -16,9 +16,11 @@ namespace ProjetoCondominio.Models
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
         public ProjetoCondominioContext() : base("name=ProjetoCondominioContext")
+        //public ProjetoCondominioContext() : base("name=TesteEntities")
         {
         }
 
-        public System.Data.Entity.DbSet<ProjetoCondominio.Models.Sala> Salas { get; set; }
+        public System.Data.Entity.DbSet<Sala> Salas { get; set; }
+        public System.Data.Entity.DbSet<Pessoa> Pessoas{ get; set; }
     }
 }

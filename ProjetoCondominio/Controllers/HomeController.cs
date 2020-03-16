@@ -11,24 +11,30 @@ namespace ProjetoCondominio.Controllers
     {
             Pessoa pessoa = new Pessoa();
         
-            TesteEntities db = new TesteEntities();
+          
         public ActionResult Index()
         {
             Console.WriteLine("Estou aqui");
             return View();
         }
 
-        public void testaDados()
+        public ActionResult testaDados(string Login, string senha)
         {
+            
+            
 
+            Console.WriteLine(Login);
+            Console.WriteLine(senha);
             Console.WriteLine(pessoa.Login);
             Console.WriteLine(pessoa.Senha);
             Console.WriteLine("Estou aqui");
+            return View();
+            //RedirectToAction("Index");
         }
 
         public ActionResult About()
         {
-           
+         
             
             ViewBag.Message = "Your application description page.";
 
