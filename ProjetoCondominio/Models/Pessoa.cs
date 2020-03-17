@@ -19,5 +19,10 @@ namespace ProjetoCondominio.Models
             AppContext.BaseDirectory.Remove(pessoa.Id);
 
     }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace ProjetoCondominio.Controllers
 {
     public class HomeController : Controller
     {
-            Pessoa pessoa = new Pessoa();
+
         
           
         public ActionResult Index()
@@ -18,18 +18,19 @@ namespace ProjetoCondominio.Controllers
             return View();
         }
 
-        public ActionResult testaDados(string Login, string senha)
+        [HttpPost]
+        public ActionResult testaDados(Pessoa pessoa)
         {
             
             
 
-            Console.WriteLine(Login);
-            Console.WriteLine(senha);
+            Console.WriteLine(pessoa.Login);
+            Console.WriteLine(pessoa.Senha);
             Console.WriteLine(pessoa.Login);
             Console.WriteLine(pessoa.Senha);
             Console.WriteLine("Estou aqui");
-            return View();
-            //RedirectToAction("Index");
+           // return View();
+          return  RedirectToAction("Index");
         }
 
         public ActionResult About()
